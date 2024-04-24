@@ -1,67 +1,63 @@
 body {
-    background-color: rgb(152, 227, 227);
+    background-color: rgb(152, 227, 227); /*задаётся цвет фона, жирность и размер шрифта во всём документе*/
     font-weight: 700;
     font-size: 20px;
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    height: 50vh;
-    justify-content: center;
+.flex-container { /*контейнер. содержит главную часть*/
+    display: flex; /*"отображение элементов" - флекс*/
+    flex-direction: row; /*флекс-элементы идут в ряд*/
+    height: 50vh; /*флекс-элемент занимает 30% высоты видимой области окна браузера*/
+    justify-content: center; /*флекс-элементы становятся в середину главной оси - по горизонтали*/
 }
 
-h2 {
+h2 { /*все заголовки h2 становятся в центр своего родительского элемента*/
     text-align: center;
 }
 
-.left-part {
-    /*display: grid;*/
+.left-part { /*левая часть главного контейнера, занимает 60% от его размера*/
     width: 60%;
     background-color: beige;
 }
 
-.right-part {
+.right-part { /*правая часть главного контейнера, занимает 40% от его размера*/
     width: 40%;
     background-color: aquamarine;
 }
 
-.somecontainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 30vh;
-    margin-top: 6%;
-    /*align-items: end;*/
+.somecontainer { /*контейнер для 2 рядов блоков в левой части*/
+    display: flex; /*"отображение элементов" - флекс*/
+    justify-content: center; /*флекс-элементы становятся в середину главной оси - по горизонтали*/
+    flex-direction: column; /*2 ряда блоков идут в стобце*/
+    height: 60%; /*контейнер занимает 60% контейнера left-part*/
+    margin-top: 6%; /*отступ сверху от заголовка h2*/
 }
 
-.top {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: 1;
+.top { /*1 ряд блока. содержит 2 равных блочка*/
+    display: flex; /*"отображение элементов" - флекс*/
+    flex-direction: row; /*флекс-элементы идут в ряд*/
+    justify-content: center; /*флекс-элементы становятся в середину главной оси - по горизонтали*/
+    flex-grow: 1; /*флекс-элементы растут и занимают всё свободное им пространство*/
 }
 
-.boxie, .bottomboxie {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-grow: 1;
+.boxie, .bottomboxie { /*применяется к блочкам верхнего и нижнего ряда блока somecontainer*/
+    display: flex; /*"отображение элементов" - флекс*/
+    justify-content: center; /*флекс-элементы становятся в середину главной оси - по горизонтали*/
+    align-items: center; /*флекс-элементы становятся в середину поперечной оси - по вертикали*/
+    flex-grow: 1; /*флекс-элементы растут и занимают всё свободное им пространство*/
     background-color: rgb(235, 189, 127);
-    margin: 5px 10px;
+    margin: 5px 10px; /*отступы по 5 пикселей сверху/снизу и по 10 по бокам*/
 }
 
-
-nav ul {
-    list-style-type: none;
-    margin: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: space-evenly;
+nav ul { /*применяется ко всем ul внутри nav - блока-меню*/
+    list-style-type: none; 
+    margin: 10px; /*отступы по 10 пикселейй со всех сторон*/
+    display: flex; /*"отображение элементов" - флекс*/
+    justify-content: space-evenly; /*все отступы между элементами списка равной величины*/
 }
 
-ul li {
-    margin: 10px;
+ul li { /*применяется ко всем элементам li неупорядоченного списка ul*/
+    margin: 10px;  /*отступы по 10 пискеселй со всех сторон*/
     background-color: beige;
-    padding: 20px 40px;
+    padding: 20px 40px;  /*внутренние отступы по 20 пикселей сверху/снизу и 40 - по бокам от внутренних границ*/
 }
